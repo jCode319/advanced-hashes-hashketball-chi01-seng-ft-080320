@@ -190,9 +190,10 @@ def big_shoe_rebounds(player_name)
   big_shoe = 0
   rebound = 0
   found_player = get_players.find do |player|
-      player[:player_name] == player_name
-      if player[:shoe] > big_shoe
-        return player[:rebound]
+      if player[:player_name] == player_name
+        return player[:rebound] if player[:shoe] > big_shoe
+        big_shoe = player[:shoe]
+        rebound = player[:rebound]
       end
     end
 end
