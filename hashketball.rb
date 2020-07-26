@@ -169,6 +169,7 @@ def player_numbers(player_name)
       if player[:player_name] == player_name
       return found_player[:number]
     end
+  end
 end
 
 def player_stats(player_name)
