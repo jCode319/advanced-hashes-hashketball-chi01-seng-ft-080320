@@ -188,5 +188,4 @@ end
 
 def big_shoe_rebounds(big_shoe)
   players.sort_by {|player| player.fetch(:shoe) }.last
-
 end
