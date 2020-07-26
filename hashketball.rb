@@ -187,10 +187,12 @@ def player_stats(player_name)
 end
 
 def rebounds_for_largest_shoe_size(game)
-  max_player = nil
+  a_player = nil
   game.each do |team, team_hash|
     team_hash[:players].each do |player, player_hash|
-      max_player ||= player_hash
-      max_player = player_hash if player_hash[:shoe_size] > max_player[:shoe_size]
+      a_player ||= player_hash
+      a_player = player_hash if player_hash[:shoe_size] > a_player[:shoe_size]
     end
   end
+  a_player[:name]
+end
