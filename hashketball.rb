@@ -194,5 +194,5 @@ def rebounds_for_largest_shoe_size(game)
       a_player = player_hash if player_hash[:shoe_size] > a_player[:shoe_size]
     end
   end
-  a_player[:name]
+  a_player[:rebound]
 end
