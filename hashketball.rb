@@ -165,9 +165,8 @@ end
 
 def player_numbers(team_name)
   jersey_numbers = []
-  game_hash.map do |team_data|
-    jersey_numbers << team_data[:team_name]
-    binding.pry
+  game_hash.map do |player|
+    jersey_numbers << team_data[:number]
   end
   jersey_numbers
 end
