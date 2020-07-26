@@ -163,10 +163,10 @@ def team_names
   end
 end
 
-def player_numbers(team_name)
+def player_numbers(numbers)
   jersey_numbers = []
-  game_hash.find do |p, team_data|
-  if team_name[:players] == team_name
+  game_hash.key do |loc, team_data|
+  if numbers[:players] == team_name
   return players[:numbers]
   end
   end
