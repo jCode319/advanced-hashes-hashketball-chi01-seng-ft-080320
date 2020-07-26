@@ -179,6 +179,9 @@ def player_numbers(team_name)
   jersey_numbers
 end
 
-def player_stats(player_match)
-  
+def player_stats(player_name)
+  found_player = get_players.find do |player|
+      player[:player_name] == player_name
+    end
+    found_player
 end
