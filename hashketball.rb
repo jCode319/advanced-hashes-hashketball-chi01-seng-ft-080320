@@ -186,7 +186,7 @@ def player_stats(player_name)
     found_player
 end
 
-def rebounds_for_largest_shoe_size(game)
+def big_shoe_rebounds(game)
   a_player = nil
   game.each do |team, team_hash|
     team_hash[:players].each do |player, player_hash|
