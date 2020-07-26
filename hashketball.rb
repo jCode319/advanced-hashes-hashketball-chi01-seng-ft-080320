@@ -190,7 +190,6 @@ def big_shoe_rebounds(game)
   a_player = nil
   game.each do |team, team_hash|
     team_hash[:players].each do |player, player_hash|
-      a_player ||= player_hash
       a_player = player_hash if player_hash[:shoe_size] > a_player[:shoe_size]
     end
   end
