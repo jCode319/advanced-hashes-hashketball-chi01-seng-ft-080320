@@ -186,16 +186,8 @@ def player_stats(player_name)
     found_player
 end
 
-def big_shoe_rebounds
-  shoe_size = 0
-  rebounds = 0
-  game_hash.each do |location, details|
-    details[:players].each do |name, info|
-      if player[:shoe] > shoe_size
-        shoe_size = player[:shoe]
-        rebounds = player[:rebounds]
-      end
-    end
+def big_shoe_rebounds(big_shoe)
+  players.sort_by do |player| 
+    player.fetch(:shoe).last
   end
-  rebounds
 end
