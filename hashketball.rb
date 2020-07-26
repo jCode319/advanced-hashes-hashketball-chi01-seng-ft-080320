@@ -186,7 +186,7 @@ def player_stats(player_name)
     found_player
 end
 
-def big_shoe_rebounds
+def big_shoe_rebounds(player_name)
   big_shoe = 0
   rebound = 0
   found_player = get_players.find do |player|
