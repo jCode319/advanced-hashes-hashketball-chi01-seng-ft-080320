@@ -187,7 +187,7 @@ def player_stats(player_name)
 end
 
 def big_shoe_rebounds(big_shoe)
-  players.sort_by do |player| 
+  players.sort_by do |player|
     player.fetch(:shoe).last
   end
 end
