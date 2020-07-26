@@ -186,12 +186,16 @@ def player_stats(player_name)
     found_player
 end
 
-def big_shoe_rebounds(game)
-  a_player = nil
-  game.each do |team, team_hash|
-    team_hash[:players].each do |player, player_hash|
-      a_player = player_hash if player_hash[:shoe_size] > a_player[:shoe_size]
-    end
-  end
-  a_player[:rebound]
+def big_shoe_rebounds
+   shoe_size = 0
+   rebound = 0
+   game_hash.each do |location, team_data|
+      team_data[:players].each do |player_name, value|
+         if value[:shoe] > shoe_size
+            shoe_size = value[:shoe]
+            rebound = value[:rebounds]
+         end
+      end
+   end
+   rebound
 end
