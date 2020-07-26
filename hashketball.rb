@@ -163,13 +163,20 @@ def team_names
   end
 end
 
-def player_numbers(player_name)
-  jersey_number = []
-  found_player = get_players.find do |player|
-      if player[:player_name] == player_name
-      return found_player[:number]
+def player_numbers(team_name)
+  jersey_numbers = []
+  game_hash.each do |location, team_data|
+  if team_data[:team_name] == team_name
+    team_data.each do |key, value|
+      if key == :players
+        value.each do |player|
+          jersey_numbers.push(player[:number])
+          end
+        end
+      end
     end
   end
+  jersey_numbers
 end
 
 def player_stats(player_name)
