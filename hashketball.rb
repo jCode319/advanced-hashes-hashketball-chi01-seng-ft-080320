@@ -186,6 +186,6 @@ def player_stats(player_name)
     found_player
 end
 
-def big_shoe_rebounds(big_shoe)
-  players.sort_by {|player| player.fetch(:shoe) }.last
+def big_shoe_rebounds
+  
 end
