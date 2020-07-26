@@ -172,5 +172,5 @@ def player_numbers(numbers)
   end
   end
 end
-jersey_numbers.push
+jersey_numbers.push()
 end
